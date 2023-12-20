@@ -1,0 +1,141 @@
+{
+	"info": {
+		"_postman_id": "46f3b1b9-3188-41a0-97d6-19b79b02ef13",
+		"name": "Hall-booking",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29529741"
+	},
+	"item": [
+		{
+			"name": "Create room",
+			"item": [
+				{
+					"name": "new rooms",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "\r\n  {\r\n    \"roomNumber\": \"101\",\r\n    \"seatsAvailable\": 50,\r\n    \"amenities\": \"Projector, Whiteboard\",\r\n    \"pricePerHour\": 50\r\n  }\r\n  \r\n\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/createRoom",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"createRoom"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Book-room",
+			"item": [
+				{
+					"name": "booking room",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"customerName\": \"John Doe\",\r\n  \"date\": \"2023-12-25\",\r\n  \"startTime\": \"10:00 AM\",\r\n  \"endTime\": \"12:00 PM\",\r\n  \"roomId\": \"101\"\r\n}\r\n\r\n\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/bookRoom",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"bookRoom"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "All room with booking data",
+			"item": [
+				{
+					"name": "List all rooms",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/listAllRooms",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"listAllRooms"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "All customers with booking data",
+			"item": [
+				{
+					"name": "List all customers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/listAllCustomers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"listAllCustomers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Booking details for a specific customer",
+			"item": [
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
